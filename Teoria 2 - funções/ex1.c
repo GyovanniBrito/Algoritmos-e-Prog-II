@@ -12,12 +12,13 @@ int main(){
     // repetir enquanto não acertar
     int inicio = 1;
     int fim = 100;
+    int tentativas = 0;
     bool acertei = false;
     while (!acertei){
-
-        //dar palpite - número na metade da faixa de números
-        palpite = inicio + fim / 2;
-        printf("meu palpite é %d \n", palpite);
+        // dar palpite (é o número na metade da faixa de números)
+        int palpite = (inicio + fim) / 2; 
+        tentativas++;
+        printf("meu palpite é %d (tentativa %d)  \n", palpite, tentativas);
         
         //pedir feedback
         printf("Digite 1 se acertei, 2 se for maior ou 3 se for menor: ");
